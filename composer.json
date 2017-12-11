@@ -1,0 +1,11 @@
+{
+    "name": "ib3/ib3_module_generator",
+    "description": "Simplify module generation in Drupal.",
+    "type": "drupal-module",
+    "authors": [
+        {
+            "name": "ib3",
+            "email": "team@ib3.uk"
+        }
+    ]
+}

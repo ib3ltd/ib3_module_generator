@@ -1,0 +1,29 @@
+theme: '{{machine_name}}'
+toolkit:
+  - 'ib3_toolkit.items'
+  - 'ib3_toolkit.taxonomy'
+  - 'ib3_toolkit.menu'
+
+session: '{{machine_name}}'
+
+taxonomy:
+  default: 'name'
+
+filters:
+  default:
+    -
+      - 'condition'
+      - 'nid'
+      - '<current>'
+
+fields:
+  default:
+    title:
+      - 'prepareTextFromNode'
+      -
+        field_name: 'title'
+
+    body:
+      - 'prepareTextFromNode'
+      -
+        field_name: 'body'

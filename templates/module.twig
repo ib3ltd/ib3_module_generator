@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains {{machine_name}}.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function {{machine_name}}_theme($existing, $type, $theme, $path) {
+  return [
+    '{{machine_name}}' => [
+      'variables' => [
+        'item' => null,
+      ],
+      'attached' => [
+        'library' => null,
+        'drupalSettings' => null,
+      ]
+    ],
+  ];
+}

@@ -1,0 +1,10 @@
+services:
+  ib3_module_generator.create:
+    class: Drupal\ib3_module_generator\Command\CreateCommand
+    arguments: ['@ib3_module_generator.module_generator', '@console.validator', '@app.root', '@console.string_converter', '@console.drupal_api']
+    tags:
+      - { name: drupal.command }
+  ib3_module_generator.module_generator:
+    class: Drupal\ib3_module_generator\Generator\ModuleGenerator
+    tags:
+      - { name: drupal.generator }

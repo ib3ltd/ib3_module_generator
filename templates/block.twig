@@ -1,0 +1,49 @@
+<?php
+
+namespace Drupal\{{machine_name}}\Plugin\Block;
+
+use Drupal\ib3_toolkit\Abstracts\Block;
+
+/**
+ * Provides a '{{class_name}}Block' block.
+ *
+ * @Block(
+ *  id = "{{snake_name}}_block",
+ *  admin_label = @Translation("{{name}} Block"),
+ * )
+ */
+
+class {{class_name}}Block extends Block {
+
+  public function build()
+  {
+    $theme = self::$config->get('theme');
+    $filters = self::$config->get('filters');
+    $fields = self::$config->get('fields');
+    $taxonomy = self::$config->get('taxonomy');
+    $session = self::$config->get('session');
+
+    $this->itemsService->process($filters['default'], $fields['default']);
+    $item = $this->itemsService->getItem(0);
+
+    $js_variable = [
+      'foo' => 'bar'
+    ];
+
+    return [
+      [
+        '#theme' => $theme,
+        '#item' => $item,
+        '#attached' => [
+          'library' => [
+            '{{machine_name}}/{{template_name}}',
+          ],
+          'drupalSettings' => [
+            '{{camel_name}}' => $js_variable,
+          ]
+        ]
+      ]
+    ];
+  }
+
+}

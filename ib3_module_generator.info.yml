@@ -1,0 +1,5 @@
+name: ib3 Module Generator
+type: module
+description: Automates the creation of block plugins
+core: 8.x
+package: ib3

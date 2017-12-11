@@ -1,0 +1,12 @@
+
+(function ($, Drupal) {
+  Drupal.behaviors.{{camel_name}}Behavior = {
+    attach: function (context, settings) {
+
+      $('p.foo', context).once('fooBar').each(function (idx, ele) {
+        $(ele).text(drupalSettings.{{camel_name}}.foo);
+      });
+
+    }
+  };
+})(jQuery, Drupal);

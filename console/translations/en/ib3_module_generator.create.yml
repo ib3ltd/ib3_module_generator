@@ -1,0 +1,5 @@
+description: 'Builds a better burger.'
+options: {}
+arguments: {}
+messages:
+    success: 'Turned out nice again.'
