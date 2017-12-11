@@ -21,11 +21,8 @@ class ModuleGenerator extends Generator
     $templateName = str_replace("_", "-", $machineName);
 
     $name = str_replace("Ib3 ","", ucwords(str_replace("_", " ", $machineName)));
-
     $className = str_replace(" ","", $name);
-
     $snakeName = str_replace(" ","_", $name);
-
     $camelName = strtolower(substr($name, 0, 1)) . substr($className, 1);
 
     $this->directoryTests($dir, 'module');
