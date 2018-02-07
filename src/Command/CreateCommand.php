@@ -173,9 +173,10 @@ class CreateCommand extends Command {
     $io = new DrupalStyle($input, $output);
     $yes = $input->hasOption('yes')?$input->getOption('yes'):false;
 
+    /*
     if (!$this->confirmGeneration($io, $yes)) {
       return 1;
-    }
+    }*/
 
     $module = $input->getOption('module');
     $modulePath = $input->getOption('module-path');
