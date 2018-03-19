@@ -68,7 +68,7 @@ class ModuleGenerator extends Generator
       $parameters
     );
 
-    $template_dir .= $dir.'/templates/';
+    $template_dir = $dir.'/templates/';
     $this->directoryTests($template_dir, 'templates');
     $this->renderFile(
       'template.twig',
@@ -76,7 +76,7 @@ class ModuleGenerator extends Generator
       $parameters
     );
 
-    $images_dir .= $dir.'/assets/images/';
+    $images_dir = $dir.'/assets/images/';
     $this->directoryTests($images_dir, 'images');
     $this->renderFile(
       'readme.twig',
@@ -84,7 +84,7 @@ class ModuleGenerator extends Generator
       $parameters
     );
 
-    $install_dir .= $dir.'/config/install/';
+    $install_dir = $dir.'/config/install/';
     $this->directoryTests($install_dir, 'install');
     $this->renderFile(
       'settings.twig',
@@ -92,7 +92,7 @@ class ModuleGenerator extends Generator
       $parameters
     );
 
-    $sass_dir .= $dir.'/sass/';
+    $sass_dir = $dir.'/sass/';
     $this->directoryTests($sass_dir, 'sass');
     $this->renderFile(
       'sass.twig',
@@ -100,7 +100,7 @@ class ModuleGenerator extends Generator
       $parameters
     );
 
-    $block_dir .= $dir.'/src/Plugin/Block/';
+    $block_dir = $dir.'/src/Plugin/Block/';
     $this->directoryTests($block_dir, 'block');
     $this->renderFile(
       'block.twig',
@@ -108,7 +108,7 @@ class ModuleGenerator extends Generator
       $parameters
     );
 
-    $js_dir .= $dir.'/js/';
+    $js_dir = $dir.'/js/';
     $this->directoryTests($js_dir, 'js');
     $this->renderFile(
       'js.twig',
